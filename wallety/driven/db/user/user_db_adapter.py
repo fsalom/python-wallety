@@ -1,7 +1,7 @@
-from project_name.application.ports.driven.user_repository_port import UserRepositoryPort
-from project_name.domain.entities.user import User
-from project_name.driven.db.user.models.user_db import UserDB
-from project_name.driven.db.user.user_db_mapper import UserDBMapper
+from wallety.application.ports.driven.user_repository_port import UserRepositoryPort
+from wallety.domain.entities.user import User
+from wallety.driven.db.user.models.user_db import UserDB
+from wallety.driven.db.user.user_db_mapper import UserDBMapper
 
 
 class DBUserAdapter(UserRepositoryPort):

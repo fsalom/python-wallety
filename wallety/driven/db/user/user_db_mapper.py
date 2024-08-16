@@ -1,5 +1,5 @@
-from project_name.domain.entities.user import User
-from project_name.driven.db.user.models.user_db import UserDB
+from wallety.domain.entities.user import User
+from wallety.driven.db.user.models.user_db import UserDB
 
 
 class UserDBMapper:

@@ -1,7 +1,7 @@
-from project_name.application.ports.driven.user_repository_port import UserRepositoryPort
-from project_name.domain.entities.user import User
-from project_name.driven.memory.user.models.user_dto import UserDTO
-from project_name.driven.memory.user.user_memory_mapper import UserInMemoryMapper
+from wallety.application.ports.driven.user_repository_port import UserRepositoryPort
+from wallety.domain.entities.user import User
+from wallety.driven.memory.user.models.user_dto import UserDTO
+from wallety.driven.memory.user.user_memory_mapper import UserInMemoryMapper
 
 
 class InMemoryUserAdapter(UserRepositoryPort):

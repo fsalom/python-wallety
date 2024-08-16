@@ -1,5 +1,5 @@
-from project_name.domain.entities.user import User
-from project_name.driven.memory.user.models.user_dto import UserDTO
+from wallety.domain.entities.user import User
+from wallety.driven.memory.user.models.user_dto import UserDTO
 
 
 class UserInMemoryMapper:

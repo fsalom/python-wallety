@@ -1,9 +1,9 @@
 from typing import List
 from fastapi import APIRouter
-from project_name.application.services.user_services import UserServices
-from project_name.driving.api.user.models.user_dto import UserDTO
-from project_name.driving.api.user.user_api_mapper import UserAPIMapper
-from project_name.driven.memory.user.user_memory_adapter import InMemoryUserAdapter
+from wallety.application.services.user_services import UserServices
+from wallety.driving.api.user.models.user_dto import UserDTO
+from wallety.driving.api.user.user_api_mapper import UserAPIMapper
+from wallety.driven.memory.user.user_memory_adapter import InMemoryUserAdapter
 
 router = APIRouter()
 user_adapter = InMemoryUserAdapter()
