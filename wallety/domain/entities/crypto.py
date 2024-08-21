@@ -1,7 +1,7 @@
 
 class Crypto:
     def __init__(self,
-                 crypto_id: int,
+                 crypto_id: str,
                  rank: str,
                  symbol: str,
                  name: str,
