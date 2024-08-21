@@ -1,11 +1,10 @@
-
 import httpx
 from fastapi import HTTPException
-
 from wallety.application.ports.driven.crypto_repository_port import CryptoRepositoryPort
 from wallety.domain.entities.crypto import Crypto
 from wallety.driven.api.crypto.coincap_mapper import CoincapMapper
-from wallety.driven.api.crypto.dto.crypto_dto import CryptoDataDTO
+from wallety.driven.api.crypto.dto.coincap_data_list_dto import CoincapDataListDTO
+from wallety.driven.api.crypto.dto.coincap_data_single_dto import CoincapDataSingleDTO
 
 
 class CryptoAPIRepository(CryptoRepositoryPort):
@@ -19,8 +18,8 @@ class CryptoAPIRepository(CryptoRepositoryPort):
                 response = await client.get("https://api.coincap.io/v2/assets")
                 response.raise_for_status()
                 json = response.json()
-                crypto_data = CryptoDataDTO(**json)
-                return self.mapper.from_list_models_to_list_entities(crypto_data)
+                crypto_data = CoincapDataListDTO(**json)
+                return self.mapper.from_data_list_to_list_entities(crypto_data)
         except httpx.HTTPStatusError as exc:
             raise HTTPException(status_code=exc.response.status_code,
                                 detail=f"Error fetching data: {exc.response.text}")
@@ -33,8 +32,8 @@ class CryptoAPIRepository(CryptoRepositoryPort):
                 response = await client.get(f"https://api.coincap.io/v2/assets/{coin}")
                 response.raise_for_status()
                 json = response.json()
-                crypto_dto = CryptoDataDTO(**json)
-                return self.mapper.from_model_to_entity(crypto_dto)
+                crypto_dto = CoincapDataSingleDTO(**json)
+                return self.mapper.from_data_single_to_entity(crypto_dto)
         except httpx.HTTPStatusError as exc:
             raise HTTPException(status_code=exc.response.status_code,
                                 detail=f"Error fetching data: {exc.response.text}")
