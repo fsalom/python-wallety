@@ -1,0 +1,12 @@
+# Test your FastAPI endpoints
+
+@name =bitcoin
+GET http://127.0.0.1:8086/crypto/{{name}}
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8086/crypto/top100/
+Accept: application/json
+
+###
