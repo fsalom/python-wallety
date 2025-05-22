@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
-from wallety.domain.entities.crypto import Crypto
-from wallety.domain.entities.historical_price import HistoricalPrice
-from wallety.domain.entities.market import Market
+from wallety.domain.crypto import Crypto
+from wallety.domain.historical_price import HistoricalPrice
+from wallety.domain.market import Market
 
 
 class CryptoRepositoryPort(ABC):
