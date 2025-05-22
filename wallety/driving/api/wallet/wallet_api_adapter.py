@@ -7,7 +7,7 @@ from wallety.driven.db.wallet.wallet_db_adapter import DBWalletAdapter
 from wallety.driving.api.wallet.wallet_api_mapper import WalletMapper
 from wallety.driving.api.wallet.models.create_wallet_dto import CreateWalletDTO
 from wallety.driving.api.wallet.models.wallet_dto import WalletDTO
-from wallety.domain.entities.wallet import Wallet
+from wallety.domain.wallet import Wallet
 
 router = APIRouter()
 _db_adapter = DBWalletAdapter()

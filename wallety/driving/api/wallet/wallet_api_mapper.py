@@ -1,4 +1,4 @@
-from wallety.domain.entities.wallet import Wallet
+from wallety.domain.wallet import Wallet
 from wallety.driving.api.wallet.models.wallet_dto import WalletDTO
 
 

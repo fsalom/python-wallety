@@ -1,4 +1,4 @@
-from wallety.domain.entities.user import User
+from wallety.domain.user import User
 from wallety.driven.db.user.models.user_db import UserDB
 
 

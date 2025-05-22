@@ -1,7 +1,7 @@
 from typing import List
 
 from wallety.application.ports.driven.wallet_repository_port import WalletRepositoryPort
-from wallety.domain.entities.wallet import Wallet
+from wallety.domain.wallet import Wallet
 
 
 class DBWalletAdapter(WalletRepositoryPort):

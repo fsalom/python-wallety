@@ -1,4 +1,4 @@
-from wallety.domain.entities.wallet import Wallet
+from wallety.domain.wallet import Wallet
 from wallety.driven.db.wallet.models.wallet_db import WalletDB
 
 
