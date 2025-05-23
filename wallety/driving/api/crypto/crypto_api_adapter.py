@@ -10,17 +10,17 @@ from wallety.driving.api.crypto.models.crypto_dto import CryptoDTO
 router = APIRouter()
 crypto_api_repository_adapter = CryptoAPIRepository(mapper=CoincapMapper())
 mapper = CryptoMapper()
-service = CryptoServices(crypto_repository_port=crypto_api_repository_adapter)
+service = CryptoServices(crypto_repository=crypto_api_repository_adapter)
 
 
 @router.get("/crypto/top100/", response_model=List[CryptoDTO])
-async def crypto_top100():
-    cryptos = await service.top100()
+async def get_crypto_top100():
+    cryptos = await service.get_list()
     cryptos_dto = [CryptoMapper.from_entity_to_model(crypto) for crypto in cryptos]
     return cryptos_dto
 
 
 @router.get("/crypto/{name}", response_model=CryptoDTO)
-async def crypto(name: str):
+async def get_crypto(name: str):
     crypto = await service.get(name)
     return CryptoMapper.from_entity_to_model(crypto)
