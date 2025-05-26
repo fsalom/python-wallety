@@ -1,6 +1,6 @@
 from wallety.application.ports.driven.user_repository_port import UserRepositoryPort
 from wallety.application.ports.driving.user_service_port import UserServicePort
-from wallety.domain.entities.user import User
+from wallety.domain.user import User
 
 
 class UserServices(UserServicePort):

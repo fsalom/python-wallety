@@ -2,7 +2,7 @@ from typing import List
 
 from wallety.application.ports.driven.wallet_repository_port import WalletRepositoryPort
 from wallety.application.ports.driving.wallet_service_port import WalletServicePort
-from wallety.domain.entities.wallet import Wallet
+from wallety.domain.wallet import Wallet
 
 
 class WalletServices(WalletServicePort):
