@@ -1,13 +1,17 @@
 from abc import ABC, abstractmethod
 
-from wallety.domain.entities.user import User
+from wallety.domain.user import User
 
 
-class UserRepositoryPort(ABC):
+class UserDBRepositoryPort(ABC):
     @abstractmethod
-    def create(self, user: User):
+    def get(self, email: str) -> User:
         pass
 
     @abstractmethod
-    def list_users(self) -> [User]:
+    def get_or_create_user_by_email(self, email: str) -> User | None:
+        pass
+
+    @abstractmethod
+    def update_fcm_token(self, user: User, token: str, platform: str):
         pass
