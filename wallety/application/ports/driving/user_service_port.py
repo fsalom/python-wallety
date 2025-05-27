@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from wallety.domain.entities.user import User
+from wallety.domain.user import User
 
 
 class UserServicePort(ABC):

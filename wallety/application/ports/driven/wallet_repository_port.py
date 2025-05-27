@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from wallety.domain.entities.wallet import Wallet
+from wallety.domain.wallet import Wallet
 
 
 class WalletRepositoryPort(ABC):
