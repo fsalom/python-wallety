@@ -1,4 +1,10 @@
+from wallety.application.ports.driven.apple_repository_port import AppleRepositoryPort
 from wallety.application.ports.driven.auth_repository_port import AuthenticationDBRepositoryPort
+from wallety.application.ports.driven.google_repository_port import GoogleRepositoryPort
+from wallety.application.ports.driven.user_repository_port import UserDBRepositoryPort
+from wallety.application.ports.driving.authentication_service_port import AuthServicePort
+from wallety.domain.tokens import Tokens
+from wallety.domain.user import User
 
 
 class AuthServices(AuthServicePort):
