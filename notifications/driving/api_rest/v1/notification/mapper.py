@@ -9,6 +9,7 @@ class NotificationAPIMapper:
             content=dto.notification.content,
             title=dto.notification.title,
             data=dto.notification.data,
+            created_by_user_id=0,
         )
 
     @staticmethod
